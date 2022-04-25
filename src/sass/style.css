@@ -61,19 +61,22 @@ body::before {
   left: 0;
 }
 
+.App .preview .content .overview {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .App .preview .content > * {
   z-index: 100;
 }
 
-.App .preview .content h1 {
-  color: #fff;
+.App .preview .content .categories {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
 }
 
-.App .preview .content p {
-  color: #fff;
-}
-
-.App .preview .content .category {
+.App .preview .content .categories .category {
   border-radius: 5px;
   border: 1px solid rgba(15, 239, 253, 0.22);
   cursor: context-menu;
@@ -81,11 +84,16 @@ body::before {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow: hidden;
 }
 
 .App .movies-container {
   overflow-y: hidden;
   overflow-x: scroll;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .App .movies-container::-webkit-scrollbar {
@@ -96,7 +104,6 @@ body::before {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 200px;
   height: 330px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -152,14 +159,13 @@ section:nth-child(even) {
 }
 
 @media (min-width: 990px) {
-  .preview .content p {
-    width: 50%;
+  .App .preview .overview {
+    width: 70%;
   }
 }
 
 @media (max-width: 768px) {
   .App .movies-container .thumbnail {
-    width: 200px;
     height: 300px;
   }
 }

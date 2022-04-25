@@ -24,24 +24,24 @@ export default function Preview({ movie, imgAPI, categories }) {
       className="preview h-50"
       style={{ backgroundImage: `url(${imgAPI}${img})` }}
     >
-      <div className="content text-center text-md-start align-items-center align-items-md-start   container d-flex flex-column justify-content-center h-100">
-        <div className="stars mb-3">
+      <div className="content text-center text-md-start align-items-center p-3 align-items-md-start  text-light container d-flex flex-column justify-content-center h-100">
+        <div className="stars ">
           <Stars width={percentage} />
         </div>
-        <h1 className="p-0 p-md-2 ps-md-0"> {movie.title} </h1>
-        <p> {movie.overview} </p>
-        <p className="fw-bold">
-          <span className=" lead">Release Date:</span> {movie.release_date}
+        <h3 className="p-0 p-md-2 ps-md-0"> {movie.title} </h3>
+        <p className="h-md-25 overview"> {movie.overview} </p>
+        <p className="mb-0">
+          <span className="fw-bold">Release Date:</span> {movie.release_date}
         </p>
-        <p className="fw-bold">
-          <span className=" lead">Status: </span>
+        <p className="mb-0">
+          <span className="fw-bold">Status: </span>
           {movie.status}
         </p>
-        <p className="fw-bold">
-          <span className="lead">Average Votes: </span>
+        <p className="">
+          <span className="fw-bold">Average Votes: </span>
           {movie.vote_average}
         </p>
-        <div className="categories d-flex align-items-center">
+        <div className="categories d-flex align-items-center justify-content-md-start justify-content-center">
           {categories.map((cat, i) => (
             <span key={i} className="text-light p-md-2 p-1 me-3 category">
               {cat.name}

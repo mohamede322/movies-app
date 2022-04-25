@@ -48,21 +48,25 @@ body {
       bottom: 0;
       left: 0;
     }
+
     .content {
+      .overview {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
       > * {
         z-index: 100;
       }
-      h1 {
-        color: #fff;
-      }
-      p {
-        color: #fff;
-      }
-      .category {
-        border-radius: 5px;
-        border: 1px solid rgba(15, 239, 253, 0.22);
-        cursor: context-menu;
-        user-select: none;
+      .categories {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        .category {
+          border-radius: 5px;
+          border: 1px solid rgba(15, 239, 253, 0.22);
+          cursor: context-menu;
+          user-select: none;
+          overflow: hidden;
+        }
       }
     }
   }
@@ -124,10 +128,10 @@ section:nth-child(even) {
   color: white;
 }
 @media (min-width: 990px) {
-  .preview {
-    .content {
-      p {
-        width: 50%;
+  .App {
+    .preview {
+      .overview {
+        width: 70%;
       }
     }
   }
