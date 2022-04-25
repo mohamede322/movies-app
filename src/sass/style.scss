@@ -50,8 +50,8 @@ body {
     }
 
     .content {
+      text-overflow: ellipsis;
       .overview {
-        text-overflow: ellipsis;
         overflow-y: scroll;
         &::-webkit-scrollbar {
           display: none;
@@ -130,7 +130,7 @@ section:nth-child(even) {
   background-color: teal;
   color: white;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .App {
     .preview {
       .overview {
@@ -139,6 +139,7 @@ section:nth-child(even) {
     }
   }
 }
+
 @media (max-width: 768px) {
   .App {
     .movies-container {

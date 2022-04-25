@@ -29,7 +29,7 @@ export default function Preview({ movie, imgAPI, categories }) {
           <Stars width={percentage} />
         </div>
         <h3 className="p-0 p-md-2 ps-md-0"> {movie.title} </h3>
-        <p className="h-md-25 overview"> {movie.overview} </p>
+        <p className=" overview"> {movie.overview} </p>
         <p className="mb-0">
           <span className="fw-bold">Release Date:</span> {movie.release_date}
         </p>

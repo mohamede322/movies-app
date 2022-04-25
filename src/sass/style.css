@@ -61,8 +61,11 @@ body::before {
   left: 0;
 }
 
-.App .preview .content .overview {
+.App .preview .content {
   text-overflow: ellipsis;
+}
+
+.App .preview .content .overview {
   overflow-y: scroll;
 }
 
@@ -162,7 +165,7 @@ section:nth-child(even) {
   color: white;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .App .preview .overview {
     width: 70%;
   }
