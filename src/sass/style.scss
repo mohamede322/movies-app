@@ -52,7 +52,10 @@ body {
     .content {
       .overview {
         text-overflow: ellipsis;
-        overflow: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
       > * {
         z-index: 100;
@@ -127,7 +130,7 @@ section:nth-child(even) {
   background-color: teal;
   color: white;
 }
-@media (min-width: 990px) {
+@media (min-width: 1200px) {
   .App {
     .preview {
       .overview {
@@ -143,24 +146,34 @@ section:nth-child(even) {
         height: 300px;
       }
     }
-  }
-}
-@media (max-width: 350px) {
-  .preview {
-    .content {
-      .category {
-        font-size: 12px;
-      }
-      p {
-        font-size: 12px;
+    .preview {
+      .content {
+        .category {
+          font-size: 16px;
+        }
+        p {
+          font-size: 16px;
+        }
       }
     }
   }
+}
+@media (max-width: 350px) {
   .App {
     .movies-container {
       .thumbnail {
         width: 200px;
         height: 250px;
+      }
+    }
+    .preview {
+      .content {
+        .category {
+          font-size: 12px;
+        }
+        p {
+          font-size: 12px;
+        }
       }
     }
   }

@@ -63,7 +63,11 @@ body::before {
 
 .App .preview .content .overview {
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.App .preview .content .overview::-webkit-scrollbar {
+  display: none;
 }
 
 .App .preview .content > * {
@@ -158,7 +162,7 @@ section:nth-child(even) {
   color: white;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 1200px) {
   .App .preview .overview {
     width: 70%;
   }
@@ -168,18 +172,24 @@ section:nth-child(even) {
   .App .movies-container .thumbnail {
     height: 300px;
   }
+  .App .preview .content .category {
+    font-size: 16px;
+  }
+  .App .preview .content p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 350px) {
-  .preview .content .category {
-    font-size: 12px;
-  }
-  .preview .content p {
-    font-size: 12px;
-  }
   .App .movies-container .thumbnail {
     width: 200px;
     height: 250px;
+  }
+  .App .preview .content .category {
+    font-size: 12px;
+  }
+  .App .preview .content p {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
