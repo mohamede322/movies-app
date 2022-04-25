@@ -24,8 +24,8 @@ export default function Preview({ movie, imgAPI, categories }) {
       className="preview h-50"
       style={{ backgroundImage: `url(${imgAPI}${img})` }}
     >
-      <div className="content text-center text-md-start align-items-center p-3 align-items-md-start  text-light container d-flex flex-column justify-content-center h-100">
-        <div className="stars ">
+      <div className="content text-center text-md-start align-items-center px-0 py-3 align-items-md-start  text-light container d-flex flex-column justify-content-center h-100">
+        <div className="stars">
           <Stars width={percentage} />
         </div>
         <h3 className="p-0 p-md-2 ps-md-0"> {movie.title} </h3>
