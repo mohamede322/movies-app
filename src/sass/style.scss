@@ -67,11 +67,9 @@ body {
     }
   }
 
-  .movies-container,
-  .swiper-wrapper {
-    display: flex;
+  .movies-container {
+    overflow-y: hidden;
     overflow-x: scroll;
-    overflow-y: scroll;
     user-select: none;
 
     &::-webkit-scrollbar {
